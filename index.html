@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 Years of Us 💕 | Happy 2nd Anniversary, My Betu!</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sacramento&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Twemoji for Apple-style Emojis -->
+  <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="scrapbook-theme">
+
+  <!-- Lock Screen Password Protection Overlay -->
+  <div class="lock-screen-overlay" id="lockScreenOverlay">
+    <div class="lock-card" id="lockCard">
+      <div class="pin-decor pin-red"></div>
+      <div class="tape-strip tape-top-left"></div>
+      <div class="tape-strip tape-top-right"></div>
+
+      <div class="lock-header-icon">
+        <img src="processed_assets/sticker_20.png" class="lock-cat-sticker float-bounce" alt="Cute Kitten Sticker">
+      </div>
+
+      <h2 class="lock-title">Our Secret Vault 🔒</h2>
+      <p class="lock-subtitle">Enter our special 4-digit passcode to unlock your anniversary surprise! <span class="emoji-ios">💖</span></p>
+
+      <form onsubmit="event.preventDefault(); checkPasscode();" class="lock-form">
+        <div class="passcode-input-group">
+          <input type="password" id="passcodeInput" maxlength="4" placeholder="••••" pattern="[0-9]*" inputmode="numeric" autofocus autocomplete="off" onkeyup="onPasscodeInput(event)">
+          <button type="button" class="unlock-btn" id="btnUnlock" onclick="checkPasscode()">
+            <span>Unlock</span> <i class="fa-solid fa-heart"></i>
+          </button>
+        </div>
+      </form>
+
+      <div class="lock-error-msg" id="lockErrorMsg"></div>
+
+      <img src="processed_assets/sticker_13.png" class="lock-corner-sticker float-rotate" alt="wink cat">
+      <img src="processed_assets/sticker_9.png" class="lock-cherry-sticker float-sway" alt="cherries">
+    </div>
+  </div>
+
+  <!-- Background Animated Stickers Container -->
+  <div class="floating-stickers-layer" id="floatingStickersLayer">
+    <img src="processed_assets/sticker_1.png" class="bg-sticker s-flower1 float-rotate" alt="white flower">
+    <img src="processed_assets/sticker_2.png" class="bg-sticker s-flower2 float-sway" alt="blue hibiscus">
+    <img src="processed_assets/sticker_3.png" class="bg-sticker s-evileye float-bounce" alt="evil eye">
+    <img src="processed_assets/sticker_4.png" class="bg-sticker s-gerbera float-pulse" alt="pink gerbera">
+    <img src="processed_assets/sticker_5.png" class="bg-sticker s-disco float-spin" alt="disco ball">
+    <img src="processed_assets/sticker_7.png" class="bg-sticker s-flower3 float-rotate-reverse" alt="pink frangipani">
+    <img src="processed_assets/sticker_8.png" class="bg-sticker s-lips float-sway" alt="kiss mark">
+    <img src="processed_assets/sticker_9.png" class="bg-sticker s-cherry float-bounce" alt="cherry bow">
+    <img src="processed_assets/sticker_10.png" class="bg-sticker s-newspaper float-sway" alt="is my girl">
+    <img src="processed_assets/sticker_11.png" class="bg-sticker s-kitty1 float-pulse" alt="party cat">
+    <img src="processed_assets/sticker_13.png" class="bg-sticker s-kitty2 float-bounce" alt="wink cat">
+    <img src="processed_assets/sticker_15.png" class="bg-sticker s-lotus float-rotate" alt="lotus">
+    <img src="processed_assets/sticker_19.png" class="bg-sticker s-bike float-sway" alt="bicycle">
+    <img src="processed_assets/sticker_20.png" class="bg-sticker s-cat-tulip float-pulse" alt="cat with tulips">
+    <img src="processed_assets/sticker_21.png" class="bg-sticker s-fav-person float-sway" alt="favorite person">
+  </div>
+
+  <!-- Music Audio Element -->
+  <audio id="mainAudioPlayer" preload="auto"></audio>
+
+  <!-- Interactive Scrapbook Container -->
+  <div class="main-wrapper">
+
+    <!-- Hero Banner Header -->
+    <header class="hero-header">
+      <div class="tape-strip tape-top-left"></div>
+      <div class="tape-strip tape-top-right"></div>
+
+      <div class="badge-tag float-sway"><span class="badge-sparkle"></span> 2 YEARS & COUNTING <span
+          class="badge-sparkle"></span></div>
+
+      <h1 class="main-title">
+        <span class="title-text-primary">Two Years of Us</span>
+        <img src="processed_assets/sticker_8.png" class="header-kiss-sticker float-bounce" alt="Kiss Mark Sticker">
+      </h1>
+
+      <p class="hero-subtitle">
+        Loving you, annoying you, stealing kisses, and falling for that cute little smile of yours all over again.
+        <span class="subtitle-emojis"><span class="emoji-ios"></span><span class="emoji-ios"></span><span
+            class="emoji-ios"></span></span>
+      </p>
+
+      <div class="header-decorations">
+        <img src="processed_assets/sticker_21.png" class="fav-person-tag float-rotate" alt="Favorite Person">
+        <img src="processed_assets/sticker_9.png" class="cherry-tag float-sway" alt="Cherries">
+        <img src="processed_assets/sticker_4.png" class="flower-header-tag float-pulse" alt="Pink Flower Sticker">
+        <img src="processed_assets/sticker_10.png" class="newspaper-header-tag float-rotate-reverse"
+          alt="Is My Girl Sticker">
+      </div>
+    </header>
+
+    <!-- Main 3 Hub Sections (Scrapbook Style, inspired by references) -->
+    <main class="scrapbook-sections-grid">
+
+      <!-- SECTION 1: PHOTO BOOTH HUB -->
+      <section class="scrapbook-card photo-card-hub" id="hubPhotobooth" tabindex="0">
+        <div class="pin-decor pin-red"></div>
+        <div class="tape-strip tape-corner-left"></div>
+
+        <div class="card-image-wrapper photobooth-cover-frame">
+          <img src="processed_assets/photobooth_cover.png" alt="Photo Booth Cover"
+            class="cover-img photobooth-strip-img">
+          <div class="hover-overlay">
+            <span class="hover-btn"><i class="fa-solid fa-camera-retro"></i> Open Photo Booth</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="section-tag"><span class="emoji-ios">📸</span> SECTION 01</div>
+          <h2 class="card-title">Our Photo Booth</h2>
+          <p class="card-desc">Click to load our polaroid memories frame by frame with cute quotes! <span
+              class="emoji-ios">🎞️</span></p>
+          <button class="action-btn" onclick="openSection('photobooth')">
+            <span>Explore Photos</span> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <img src="processed_assets/sticker_16.png" class="sticker-on-card sticker-camera" alt="camera">
+      </section>
+
+      <!-- SECTION 2: MUSIC HUB -->
+      <section class="scrapbook-card music-card-hub" id="hubMusic" tabindex="0">
+        <div class="pin-decor pin-gold"></div>
+        <div class="tape-strip tape-corner-right"></div>
+
+        <div class="card-image-wrapper cassette-cover-frame">
+          <div class="vinyl-disc-behind"></div>
+          <img src="processed_assets/cassette_cover.png" alt="Cassette Tape Cover" class="cover-img cassette-img">
+          <div class="hover-overlay">
+            <span class="hover-btn"><i class="fa-solid fa-compact-disc"></i> Play Our Songs</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="section-tag"><span class="emoji-ios">🎵</span> SECTION 02</div>
+          <h2 class="card-title">Music & Cassette</h2>
+          <p class="card-desc">Click to spin our favorite romantic tracks with cassette reel animations & Spotify
+            lyrics! <span class="emoji-ios">🎧</span></p>
+          <button class="action-btn" onclick="openSection('music')">
+            <span>Listen & Read Lyrics</span> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <img src="processed_assets/sticker_5.png" class="sticker-on-card sticker-disc" alt="disco ball">
+      </section>
+
+      <!-- SECTION 3: LOVE LETTER HUB -->
+      <section class="scrapbook-card letter-card-hub" id="hubLetter" tabindex="0">
+        <div class="pin-decor pin-red"></div>
+        <div class="tape-strip tape-bottom-center"></div>
+
+        <div class="card-image-wrapper envelope-cover-frame">
+          <img src="processed_assets/envelope_cover.png" alt="Envelope Letter Cover" class="cover-img envelope-img">
+          <div class="hover-overlay">
+            <span class="hover-btn"><i class="fa-solid fa-envelope-open-text"></i> Read My Letter</span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="section-tag"><span class="emoji-ios">💌</span> SECTION 03</div>
+          <h2 class="card-title">Love Letter</h2>
+          <p class="card-desc">Click on the envelope to open a letter that unfolds word-by-word with all my love. <span
+              class="emoji-ios">❤️</span></p>
+          <button class="action-btn" onclick="openSection('letter')">
+            <span>Open Envelope</span> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <img src="processed_assets/sticker_8.png" class="sticker-on-card sticker-kiss" alt="kiss mark">
+      </section>
+
+    </main>
+
+    <!-- Bottom Scrapbook Footer Quote -->
+    <footer class="scrapbook-footer">
+      <div class="footer-paper-strip">
+        <img src="processed_assets/sticker_10.png" class="footer-heart-sticker" alt="is my girl">
+        <p class="footer-text">
+          "I never knew forever could look this beautiful." <span class="emoji-ios">❤️</span>
+        </p>
+        <div class="footer-date">2 Years Together • Forever To Go</div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- ==================== MODAL 1: PHOTO BOOTH GALLERY ==================== -->
+  <div class="modal-overlay" id="modalPhotobooth">
+    <div class="modal-paper-container gallery-container">
+      <button class="close-modal-btn" onclick="closeSection('photobooth')"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="gallery-header">
+        <img src="processed_assets/sticker_16.png" class="hdr-sticker-cam" alt="camera">
+        <div class="section-tag"><span class="emoji-ios">🎞️</span> OUR MEMORY PHOTOBOOTH</div>
+        <h2 class="modal-title">Pieces of Our Story</h2>
+        <p class="modal-subtitle">Click any polaroid to view full size with cute quotes!</p>
+
+        <!-- Photobooth Strip Dispenser Trigger -->
+        <button class="dispenser-btn" id="btnDispenseStrip">
+          <i class="fa-solid fa-print"></i> Print Photobooth Strip! ✨
+        </button>
+      </div>
+
+      <!-- Photobooth Strip Ejector Area -->
+      <div class="strip-dispenser-output" id="stripOutput"></div>
+
+      <!-- Polaroid Grid Pile -->
+      <div class="polaroid-grid" id="polaroidGrid">
+        <!-- Dynamically populated via JS with 26 polaroid photos -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Photo Viewer Modal -->
+  <div class="lightbox-overlay" id="lightboxModal">
+    <div class="lightbox-card">
+      <button class="close-lightbox-btn" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+      <div class="lightbox-polaroid">
+        <div class="polaroid-img-box">
+          <img id="lightboxImg" src="" alt="Couple memory photo">
+        </div>
+        <div class="polaroid-caption-box">
+          <p id="lightboxCaption" class="handwritten-caption"></p>
+          <div class="lightbox-hearts">
+            <span class="emoji-ios">❤️</span><span class="emoji-ios">🥰</span><span class="emoji-ios">✨</span>
+          </div>
+        </div>
+      </div>
+      <div class="lightbox-nav">
+        <button onclick="prevPhoto()"><i class="fa-solid fa-chevron-left"></i> Previous</button>
+        <span id="lightboxIndex">1 / 26</span>
+        <button onclick="nextPhoto()">Next <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== MODAL 2: MUSIC & CASSETTE PLAYER ==================== -->
+  <div class="modal-overlay" id="modalMusic">
+    <div class="modal-paper-container music-container">
+      <button class="close-modal-btn" onclick="closeSection('music')"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="music-header">
+        <img src="processed_assets/sticker_5.png" class="hdr-sticker-disco" alt="disco ball">
+        <div class="section-tag"><span class="emoji-ios">🎵</span> OUR DATE NIGHT SOUNDTRACK</div>
+        <h2 class="modal-title">Cassette Tape & Spotify Lyrics</h2>
+      </div>
+
+      <div class="music-player-layout">
+
+        <!-- Left Column: Cassette & Controls -->
+        <div class="cassette-player-box">
+
+          <!-- Animated Cassette Tape Visualizer -->
+          <div class="cassette-deck" id="cassetteDeck">
+            <div class="cassette-body">
+              <div class="cassette-label">
+                <span class="cassette-title" id="cassetteTrackTitle">Tum Se Hi</span>
+                <span class="cassette-artist" id="cassetteTrackArtist">Pritam, Mohit Chauhan</span>
+              </div>
+              <div class="cassette-window">
+                <div class="reel reel-left" id="reelLeft">
+                  <div class="spoke"></div>
+                </div>
+                <div class="tape-bridge"></div>
+                <div class="reel reel-right" id="reelRight">
+                  <div class="spoke"></div>
+                </div>
+              </div>
+              <div class="cassette-screw s1"></div>
+              <div class="cassette-screw s2"></div>
+              <div class="cassette-screw s3"></div>
+              <div class="cassette-screw s4"></div>
+            </div>
+          </div>
+
+          <!-- Song Selector Tabs -->
+          <div class="song-tabs">
+            <button class="song-tab active" data-song="0" onclick="switchSong(0)">
+              <i class="fa-solid fa-music"></i> Tum Se Hi
+            </button>
+            <button class="song-tab" data-song="1" onclick="switchSong(1)">
+              <i class="fa-solid fa-music"></i> Until I Found You
+            </button>
+            <button class="song-tab" data-song="2" onclick="switchSong(2)">
+              <i class="fa-solid fa-music"></i> Perfect
+            </button>
+          </div>
+
+          <!-- Cassette Controls -->
+          <div class="player-controls">
+            <div class="time-slider-box">
+              <span id="currentTimeDisplay">0:00</span>
+              <input type="range" id="trackSeekBar" value="0" min="0" max="100" class="custom-range">
+              <span id="totalTimeDisplay">3:30</span>
+            </div>
+
+            <div class="control-buttons">
+              <button class="ctrl-btn" onclick="prevSong()"><i class="fa-solid fa-backward-step"></i></button>
+              <button class="ctrl-btn play-btn" id="btnPlayPause" onclick="togglePlayPause()">
+                <i class="fa-solid fa-play" id="playIcon"></i>
+              </button>
+              <button class="ctrl-btn" onclick="nextSong()"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Spotify-Style Lyrics Card (Inspired by Reference 4) -->
+        <div class="spotify-lyrics-card">
+          <div class="spotify-header">
+            <div class="spotify-logo"><i class="fa-brands fa-spotify"></i> Spotify Lyrics</div>
+            <div class="now-playing-badge" id="nowPlayingBadge"><span class="equalizer-bar"></span> Playing</div>
+          </div>
+
+          <div class="spotify-track-meta">
+            <div class="spotify-art-box">
+              <img id="spotifyAlbumArt" src="processed_assets/photos/photo_1.jpg" alt="Album Cover">
+            </div>
+            <div class="spotify-info">
+              <h3 id="spotifyTrackTitle">Tum Se Hi</h3>
+              <p id="spotifyArtist">Pritam, Mohit Chauhan • Jab We Met</p>
+            </div>
+          </div>
+
+          <!-- Synced Scrollable Lyrics Container -->
+          <div class="lyrics-scroll-box" id="lyricsScrollBox">
+            <!-- Lyrics lines populated dynamically by JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== MODAL 3: LOVE LETTER ENVELOPE ==================== -->
+  <div class="modal-overlay" id="modalLetter">
+    <div class="modal-paper-container letter-modal-container">
+      <button class="close-modal-btn" onclick="closeSection('letter')"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="letter-stage">
+
+        <!-- Interactive Envelope -->
+        <div class="envelope-wrapper" id="envelopeWrapper" onclick="toggleLetterOpen()">
+          <div class="envelope-back"></div>
+
+          <!-- Letter Sheet inside -->
+          <div class="letter-sheet" id="letterSheet">
+            <div class="letter-content-inner">
+              <div class="letter-header-icon">
+                <img src="processed_assets/sticker_20.png" class="cat-tulip-decor" alt="Cute kitten">
+                <span class="letter-date">September 28, 2026 • 2nd Anniversary</span>
+              </div>
+
+              <h2 class="letter-salutation">Dear Betu, <span class="emoji-ios">❤️</span></h2>
+
+              <!-- Word by word typewriter container -->
+              <div class="letter-body-text" id="letterBodyText">
+                <!-- Text unfolds here word by word -->
+              </div>
+
+              <div class="letter-signature">
+                <p>Forever & Always Yours,</p>
+                <span class="signature-name">Your Boy 🥰</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Envelope Front Flaps -->
+          <div class="envelope-front"></div>
+          <div class="envelope-flap" id="envelopeFlap">
+            <div class="wax-seal" id="waxSeal">
+              <img src="processed_assets/sticker_8.png" class="seal-kiss-img" alt="Seal Kiss">
+            </div>
+          </div>
+        </div>
+
+        <div class="envelope-hint" id="envelopeHint">
+          <i class="fa-solid fa-hand-pointer"></i> Click on the envelope to open & read my letter! <span
+            class="emoji-ios">💌</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Particle Container for Heart/Kiss Bursts -->
+  <div id="particleContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

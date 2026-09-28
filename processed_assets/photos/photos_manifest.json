@@ -1,0 +1,132 @@
+[
+  {
+    "original": "Image (1).jpg",
+    "clean": "photo_1.jpg",
+    "id": 1
+  },
+  {
+    "original": "Image (2).jpg",
+    "clean": "photo_2.jpg",
+    "id": 2
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.25 PM.jpeg",
+    "clean": "photo_3.jpeg",
+    "id": 3
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.26 PM (1).jpeg",
+    "clean": "photo_4.jpeg",
+    "id": 4
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.26 PM (2).jpeg",
+    "clean": "photo_5.jpeg",
+    "id": 5
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.26 PM (3).jpeg",
+    "clean": "photo_6.jpeg",
+    "id": 6
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.26 PM (4).jpeg",
+    "clean": "photo_7.jpeg",
+    "id": 7
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.26 PM (5).jpeg",
+    "clean": "photo_8.jpeg",
+    "id": 8
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.26 PM.jpeg",
+    "clean": "photo_9.jpeg",
+    "id": 9
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (1).jpeg",
+    "clean": "photo_10.jpeg",
+    "id": 10
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (10).jpeg",
+    "clean": "photo_11.jpeg",
+    "id": 11
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (11).jpeg",
+    "clean": "photo_12.jpeg",
+    "id": 12
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (12).jpeg",
+    "clean": "photo_13.jpeg",
+    "id": 13
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (13).jpeg",
+    "clean": "photo_14.jpeg",
+    "id": 14
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (14).jpeg",
+    "clean": "photo_15.jpeg",
+    "id": 15
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (15).jpeg",
+    "clean": "photo_16.jpeg",
+    "id": 16
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (2).jpeg",
+    "clean": "photo_17.jpeg",
+    "id": 17
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (3).jpeg",
+    "clean": "photo_18.jpeg",
+    "id": 18
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (4).jpeg",
+    "clean": "photo_19.jpeg",
+    "id": 19
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (5).jpeg",
+    "clean": "photo_20.jpeg",
+    "id": 20
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (6).jpeg",
+    "clean": "photo_21.jpeg",
+    "id": 21
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (7).jpeg",
+    "clean": "photo_22.jpeg",
+    "id": 22
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (8).jpeg",
+    "clean": "photo_23.jpeg",
+    "id": 23
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM (9).jpeg",
+    "clean": "photo_24.jpeg",
+    "id": 24
+  },
+  {
+    "original": "WhatsApp Image 2026-09-27 at 11.48.27 PM.jpeg",
+    "clean": "photo_25.jpeg",
+    "id": 25
+  },
+  {
+    "original": "image without background.png",
+    "clean": "photo_26.png",
+    "id": 26
+  }
+]
